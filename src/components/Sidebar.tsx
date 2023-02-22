@@ -1,4 +1,6 @@
-import { House, Hash, Bell, Envelope, Bookmark, FileText, User, DotsThreeCircle } from "phosphor-react";
+import { House, Hash, Bell, Envelope, Bookmark, FileText, User, DotsThreeCircle, Pencil } from "phosphor-react";
+import { Link, NavLink } from 'react-router-dom'
+
 import twitterLogo from '../assets/logo-twitter.svg'
 import './Sidebar.css'
 
@@ -7,16 +9,16 @@ export function Sidebar(){
     <aside className='sidebar'>
     <img className='logo' src={twitterLogo} alt="logo" />
     <nav className='mainNavigation'>
-      <a className='active' href=""><House weight='fill'/>  Home</a>
-      <a href=""><Hash/>Explore</a>
-      <a href=""><Bell/> Notifications</a>
-      <a href=""><Envelope/> Messages</a>
-      <a href=""><Bookmark/>Bookmarks</a>
-      <a href=""><FileText/>Lists</a>
-      <a href=""><User/>Profile</a>
-      <a href=""><DotsThreeCircle/>More</a>
+      <NavLink to="/"><House weight='fill'/> <span>Home</span></NavLink>
+      <Link to="#"><Hash/><span>Explore</span></Link>
+      <Link to="#"><Bell/> <span>Notifications</span></Link>
+      <Link to="#"><Envelope/> <span>Messages</span></Link>
+      <Link to="#"><Bookmark/><span>Bookmarks</span></Link>
+      <Link to="#"><FileText/><span>Lists</span></Link>
+      <Link to="#"><User/><span>Profile</span></Link>
+      <Link to="#"><DotsThreeCircle/><span>More</span></Link>
     </nav>
-    <button className='newTweet' type='button'>Tweet</button>
+    <button className='newTweet' type='button'><Pencil/> <span>Tweet</span></button>
   </aside>
   )
 }

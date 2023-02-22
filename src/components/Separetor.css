@@ -1,0 +1,8 @@
+
+
+.separetor{
+  background-color: #f7f9fa;
+  border-top: 1px solid var(--border-line-color);
+  border-bottom: 1px solid var(--border-line-color);
+  height: .75rem;
+}
