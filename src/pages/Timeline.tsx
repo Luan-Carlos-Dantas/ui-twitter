@@ -5,11 +5,9 @@ import { Tweet } from "../components/Tweet"
 
 import './Timeline.css'
 
-let newTweet = ''
-
 export function Timeline(){
   const [newTweet, setNewTweet] = useState('')
-  const [tweets, setTweet]= useState([''])
+  const [tweets, setTweet]= useState([])
 
 // SPA - Evitar redirecionamento
 
@@ -27,7 +25,6 @@ export function Timeline(){
     setTweet([ newTweet, ...tweets])
     setNewTweet('')
   }
- 
 
   return(
     <main className='timeline'>

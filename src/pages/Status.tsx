@@ -1,16 +1,10 @@
+import { PaperPlaneRight } from 'phosphor-react'
 import { FormEvent, KeyboardEvent, useState } from 'react'
 import { Header } from '../components/Header'
 import { Separetor } from '../components/Separetor'
 import { Tweet } from '../components/Tweet'
 
 import './Status.css'
-
-const answers = [
-  `Concordo...`,
-  `Olha, faz sentido!`,
-  `Parabéns pelo progresso!`,
-  `lidar com datas continua sendo uma das coisas mais chatas em programação... por exemplo: - o mês no JS começa em 0 (janeiro = 0) - a semana começa em 0 (domingo = 0) - o mês no MySQL começa em 1 (janeiro = 1) - a semana no MySQL começa na segunda-feira (domingo = 6)`,
-]
 
 export function Status(){
   const [newAnswer, setNewAnswer] = useState('')
@@ -33,7 +27,7 @@ export function Status(){
   return (
     <main className='status'>
       <Header title='Tweet'/>
-        <Tweet content=' Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquam nesciunt placeat veniam ab! Suscipit consequatur officia explicabo consectetur ullam adipisci tempore modi qui laboriosam voluptates magni, ducimus provident excepturi!'/>
+        <Tweet content='Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquam nesciunt placeat veniam ab! Suscipit consequatur officia explicabo consectetur ullam adipisci tempore modi qui laboriosam voluptates magni, ducimus provident excepturi!'/>
         <Separetor/>
         <form onSubmit={createNewAnswer} className='answer-tweet-form'>
             <label htmlFor="tweet">
@@ -46,7 +40,10 @@ export function Status(){
                 setNewAnswer(event.target.value)
               }}></textarea>
             </label>
-            <button type='submit'>Answer</button>
+            <button type='submit'>
+              <PaperPlaneRight/>
+              <span>Answer</span>
+            </button>
           </form>
 
 
